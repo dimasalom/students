@@ -1,9 +1,9 @@
 package dima.spring.students;
 
 
+import dima.spring.students.service.QuestionReaderImpl;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.io.File;
 import java.net.URISyntaxException;
 
 public class StudentsApplication {
@@ -14,11 +14,9 @@ public class StudentsApplication {
 
         String fileName = "questions.csv";
 
-        QuestionsReader questionsReader = context.getBean(QuestionsReader.class);
+        QuestionReaderImpl service = context.getBean(QuestionReaderImpl.class);
 
-        File file = questionsReader.getFileFromResources(fileName);
-
-        questionsReader.printFile(file);
+        service.askQuestion(fileName);
 
     }
 }

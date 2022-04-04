@@ -1,6 +1,4 @@
-package dima.spring.students;
-
-import org.springframework.stereotype.Component;
+package dima.spring.students.domain;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,6 +41,5 @@ public class QuestionsReader {
             ex.printStackTrace();
         }
     }
-
 
 }
