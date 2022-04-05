@@ -4,13 +4,5 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean id="implDao" name="reader" class="dima.spring.students.dao.QuestionsDaoImpl">
-
-    </bean>
-
-    <bean id="questionsImpl" class="dima.spring.students.service.QuestionReaderImpl">
-        <constructor-arg name="reader" ref="reader"/>
-    </bean>
-
 
 </beans>

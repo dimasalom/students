@@ -1,4 +1,4 @@
-package dima.spring.students.domain;
+package dima.spring.students;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,12 +6,13 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.util.ArrayList;
 import java.util.List;
 
 
 import static java.lang.ClassLoader.getSystemClassLoader;
 
-public class QuestionsReader {
+public class FIleReader {
 
     public File getFileFromResources(String fileName) throws URISyntaxException {
 
@@ -27,19 +28,19 @@ public class QuestionsReader {
         }
     }
 
-    public void printFile(File file) {
+    public List<String> getFileContent(File file) {
 
-        List<String> lines;
+        List<String> lines = new ArrayList<>();
 
         try {
             lines = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
-
-            lines.forEach(System.out::println);
 
         } catch (IOException ex) {
 
             ex.printStackTrace();
         }
+
+        return lines;
     }
 
 }

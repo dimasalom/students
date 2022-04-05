@@ -1,4 +1,4 @@
-package dima.spring.students.domain;
+package dima.spring.students;
 
 public class Student {
     private String name;
